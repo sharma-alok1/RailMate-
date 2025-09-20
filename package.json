@@ -1,0 +1,45 @@
+{
+  "name": "railmate-ai",
+  "version": "1.0.0",
+  "description": "Intelligent Indian Railways Assistant with OpenAI GPT integration",
+  "main": "backend/server.js",
+  "scripts": {
+    "setup": "powershell -ExecutionPolicy Bypass -File setup.ps1",
+    "install:all": "npm run install:backend && npm run install:frontend",
+    "install:backend": "cd backend && npm install",
+    "install:frontend": "cd frontend && npm install",
+    "start:backend": "cd backend && npm run dev",
+    "start:frontend": "cd frontend && npm start",
+    "start": "concurrently \"npm run start:backend\" \"npm run start:frontend\"",
+    "build": "cd frontend && npm run build",
+    "test": "echo \"No tests specified\" && exit 0"
+  },
+  "keywords": [
+    "railways",
+    "chatbot",
+    "ai",
+    "openai",
+    "gpt",
+    "indian-railways",
+    "react",
+    "nodejs",
+    "express"
+  ],
+  "author": "RailMate AI Team",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=8.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/railmate-ai.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/railmate-ai/issues"
+  },
+  "homepage": "https://github.com/yourusername/railmate-ai#readme"
+}

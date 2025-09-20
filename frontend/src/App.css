@@ -1,0 +1,47 @@
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: transparent;
+}
+
+/* Loading state */
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+  color: #f8fafc;
+  font-size: 18px;
+}
+
+/* Error state */
+.error {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+  color: #ff6b6b;
+  font-size: 16px;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Success state */
+.success {
+  color: #51cf66;
+}
+
+/* Container */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 15px;
+  }
+}

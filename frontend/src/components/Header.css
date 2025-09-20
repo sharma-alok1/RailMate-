@@ -1,0 +1,130 @@
+.header {
+  background: linear-gradient(180deg, rgba(13, 19, 44, 0.8), rgba(13, 19, 44, 0.55));
+  backdrop-filter: saturate(150%) blur(14px);
+  border-bottom: 1px solid var(--color-glass-border);
+  padding: 14px 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: var(--shadow-lg);
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo-icon {
+  width: 2.2rem;
+  height: 2.2rem;
+  color: var(--color-accent);
+  filter: drop-shadow(0 2px 8px rgba(212, 175, 55, 0.35));
+}
+
+.logo-text h1 {
+  color: var(--color-text);
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.logo-text span {
+  color: var(--color-text-dim);
+  font-size: 0.9rem;
+  font-weight: 400;
+  display: block;
+  margin-top: -0.2rem;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.theme-toggle {
+  background: var(--color-glass-bg);
+  border: 1px solid var(--color-glass-border);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.theme-toggle:hover {
+  background: var(--color-primary);
+  color: white;
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(124, 92, 255, 0.3);
+}
+
+.ai-status {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(124, 92, 255, 0.12);
+  padding: 0.5rem 0.9rem;
+  border-radius: 999px;
+  border: 1px solid rgba(124, 92, 255, 0.35);
+  color: var(--color-text);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.ai-icon {
+  width: 1.1rem;
+  height: 1.1rem;
+  color: var(--color-primary);
+  animation: pulse 2s infinite;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .header-content {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+  
+  .logo-text h1 {
+    font-size: 1.5rem;
+  }
+  
+  .logo-text span {
+    font-size: 0.8rem;
+  }
+  
+  .ai-status {
+    font-size: 0.8rem;
+    padding: 0.4rem 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .logo-icon {
+    width: 2rem;
+    height: 2rem;
+  }
+  
+  .logo-text h1 {
+    font-size: 1.3rem;
+  }
+}
